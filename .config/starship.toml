@@ -12,7 +12,7 @@ truncation_symbol = ''
 
 [git_status]
 conflicted = '🏳'
-ahead = '🏎'
+ahead = '🏎 '
 behind = ' 󰓖 '
 diverged = ' 󱡷 '
 up_to_date = '✓'
