@@ -15,7 +15,7 @@ import socket
 import platform
 import webbrowser
 import subprocess
-from typing import List 
+from typing import List
 from libqtile import qtile
 from libqtile.command import lazy
 from libqtile.dgroups import simple_key_binder
@@ -26,9 +26,9 @@ from libqtile.config import Click, Drag, Group,  Key, Match, Screen, ScratchPad,
 
 mod = "mod4"
 myTerm = "alacritty"
-myAltTerm="warp-terminal"
+myAltTerm = "alacritty"
 myBrowser = "brave"
-myGithubUrl ="https://github.com/darkxxdevs" 
+myGithubUrl = "https://github.com/darkxxdevs"
 
 
 # OPEN GITHUB
@@ -36,6 +36,8 @@ def open_github():
     webbrowser.open_new_tab(myGithubUrl)
 
 # get kernel version
+
+
 def getKernelVersion():
     return platform.release()
 
@@ -44,6 +46,7 @@ def getKernelVersion():
 
 
 keys = [
+    Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -62,7 +65,8 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     Key([mod], "Return", lazy.spawn(myTerm), desc="Launch terminal"),
-    Key([mod , "shift"], "Return", lazy.spawn(myAltTerm), desc="Launch alternate terminal"),
+    Key([mod, "shift"], "Return", lazy.spawn(
+        myAltTerm), desc="Launch alternate terminal"),
 
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
@@ -78,9 +82,9 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([mod], "space", lazy.group['drxterm'].dropdown_toggle("myTerm")),
-    Key([] , "XF86AudioRaiseVolume" , lazy.spawn("amixer set Master 5%+")),
-    Key([] , "XF86AudioLowerVolume" , lazy.spawn("amixer set Master 5%-")),
-    Key([mod], "b" , lazy.spawn(myBrowser) ),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
+    Key([mod], "b", lazy.spawn(myBrowser)),
 ]
 
 # calculations for the screen size
@@ -174,12 +178,12 @@ colors = [["#0f1014", "#0f1014",],
           ["#c678dd", "#c678dd"],
           ["#46d9ff", "#46d9ff"],
           ["#a9a1e1", "#a9a1e1"],
-		  ["#dddddd" , "#dddddd"],
-		  ["#dbafa4" , "#dbafa4"],
-		  ["#abb2bf" , "#abb2bf"],
-		  ["#9a989c" , "#9a989c"],
-		  ["#debfff", "#debfff"],
-]
+          ["#dddddd", "#dddddd"],
+          ["#dbafa4", "#dbafa4"],
+          ["#abb2bf", "#abb2bf"],
+          ["#9a989c", "#9a989c"],
+          ["#debfff", "#debfff"],
+          ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -214,7 +218,6 @@ userName_ = widget.TextBox(
     text=" ",
     background=colors[0]
 )
-
 
 
 extension_defaults = widget_defaults.copy()
@@ -304,7 +307,7 @@ def init_widgets_list():
             foreground=colors[0],
             background=colors[0]
         ),
-        
+
         widget.Memory(
             foreground=colors[12],
             background=colors[0],
