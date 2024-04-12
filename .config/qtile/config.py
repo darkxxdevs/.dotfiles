@@ -28,6 +28,7 @@ mod = "mod4"
 myTerm = "alacritty"
 myAltTerm = "alacritty"
 myBrowser = "brave"
+myAltBrowser = "firefox"
 myGithubUrl = "https://github.com/darkxxdevs"
 
 
@@ -85,6 +86,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
     Key([mod], "b", lazy.spawn(myBrowser)),
+    Key([mod, "shift"], "b", lazy.spawn(myAltBrowser)),
 ]
 
 # calculations for the screen size
