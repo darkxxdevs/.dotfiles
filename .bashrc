@@ -79,11 +79,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias ..="cd .."
 alias ls='eza --icons'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vim='nvim' 
+alias sd="cd ~ && cd \$(find * -type d | fzf)"
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -134,3 +136,4 @@ source /usr/share/nvm/nvm.sh
 source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
 
+export BROWSER="brave"

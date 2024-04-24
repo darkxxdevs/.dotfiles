@@ -27,6 +27,7 @@ end
 #setting up some of my alias 
 alias vim="nvim"
 alias ls="exa"
+alias sd "cd ~ && cd (find * -type d | fzf)"
 
  set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/darkxx/.ghcup/bin $PATH # ghcup-env
 
