@@ -134,5 +134,3 @@ source /usr/share/nvm/nvm.sh
 source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
 
-export SRC_ACCESS_TOKEN=msgp_a0d7ccb4f752ea73_263ebf65c3ad6def150cdd887ef5b69708541404
-export SRC_ENDPOINT=https://sourcegraph.com/users/darkxxdevs
