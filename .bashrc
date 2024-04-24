@@ -3,7 +3,7 @@
 #!/bin/bash
 # starut p with my figlet
 #~/.config/echo-script
-# If not running interactively, don't do anything
+# If not bunning interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -85,8 +85,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vim='nvim' 
-alias sd="cd ~ && cd \$(find * -type d | fzf)"
-# Add an "alert" alias for long running commands.  Use like so:
+alias sd="cd ~ && cd \$(find . -type d | sed 's|^\./||' | fzf)"
+# Add an "alert" alias for long bunning commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
@@ -122,6 +122,9 @@ eval "$(starship init bash)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
+#cargo binaries
+export PATH="$HOME/.cargo/bin/":$PATH
+
 gci(){
 	 $HOME/go/bin/golangci-lint
 }
@@ -137,3 +140,6 @@ source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
 
 export BROWSER="brave"
+
+
+
