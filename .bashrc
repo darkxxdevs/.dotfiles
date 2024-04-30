@@ -141,5 +141,6 @@ source /usr/share/nvm/install-nvm-exec
 
 export BROWSER="brave"
 
+eval "$(zoxide init bash)"
 
 
