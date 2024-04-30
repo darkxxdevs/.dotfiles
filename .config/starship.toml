@@ -1,10 +1,10 @@
 [character]
 success_symbol = "[• ](bold fg:blue) "
-error_symbol = "[ • 󰅙](bold fg:white) "
+error_symbol = "[• 󰅙](bold fg:white) "
 
 [cmd_duration]
 min_time=1000
-format = 'underwent [$duration](bold yellow)'
+format = '[$duration](bold yellow)'
 
 [directory]
 read_only = " 󰌾"
