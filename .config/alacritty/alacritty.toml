@@ -1,3 +1,4 @@
+
 [colors.bright]
 black = "0x6e7681"
 blue = "0x79c0ff"
@@ -22,7 +23,7 @@ red = "0xe33333"
 white = "0xb1bac4"
 
 [colors.primary]
-# background = "#0f1014"
+ # background = "#0f1014"
 background = "#0a0b0c"
 foreground = "#cccccc"
 
@@ -30,7 +31,7 @@ foreground = "#cccccc"
 shape = "Block"
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
@@ -45,7 +46,7 @@ style = "SemiBold"
 
 [font.italic]
 family = "JetBrainsMono NF SemiBold"
-style = "Regular"
+style = "SemiBold"
 
 [font.normal]
 family = "JetBrainsMono NF SemiBold"
@@ -59,7 +60,8 @@ decorations = "none"
 dynamic_padding = true
 dynamic_title = true
 startup_mode = "Maximized"
+# opacity=0.8
 
 [window.padding]
-x = 1
+x = 0 
 y = 0
