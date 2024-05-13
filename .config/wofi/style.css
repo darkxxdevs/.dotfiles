@@ -1,0 +1,41 @@
+window {
+  margin: 0px;
+  background-color: #0f1014;
+  border-radius: 8px;
+  font-family: "SF Pro display";
+  font-size: 14px;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: #dddddd;
+  background-color: #0f1014;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: #0f1014;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: #0f1014;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: #dddddd;
+}
+
+#entry:selected {
+  background-color: #0f1014;
+}
