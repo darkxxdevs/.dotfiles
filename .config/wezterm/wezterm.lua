@@ -20,6 +20,8 @@ config.font_size = 10.6
 
 config.enable_tab_bar = false
 
+config.enable_wayland = false
+
 config.window_close_confirmation = "NeverPrompt"
 
 config.window_padding = {
