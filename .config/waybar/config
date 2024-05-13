@@ -99,22 +99,16 @@
             "critical": 90
         }
     },
-
-    "network": {
-        "interval": 5,
-        "format-wifi": " ", // Icon: wifi
-        "format-ethernet": " ", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "alacritty -e 'nmtui'",
-    },
-    "network#vpn": {
-        "interface": "wlan0",
-        "format": " ",
-        "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-    },
-
+	"network":{
+        "format": " Disabled",
+        "format-wifi": "{bandwidthDownBytes:>}{bandwidthUpBytes:>}",
+        "tooltip-format-wifi": "{essid}",
+        "format-ethernet": "{bandwidthDownBits:>}{bandwidthUpBits:>}",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": " no_internet",
+        "on-click": "footclient -T waybar_nmtui -e nmtui",
+        "interval": 2,
+	},
     "hyprland/mode": {
         "format": "{}",
         "tooltip": false
@@ -234,8 +228,8 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": "",
-            "default": "󰗃"
+            "spotify": " ",
+            "default": "󰗃 "
         },
         "escape": true,
         "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
