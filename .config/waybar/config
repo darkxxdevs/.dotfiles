@@ -101,9 +101,9 @@
     },
 	"network":{
         "format": " Disabled",
-        "format-wifi": "{bandwidthDownBytes:>}{bandwidthUpBytes:>}",
+        "format-wifi": " {bandwidthDownBytes:>} {bandwidthUpBytes:>}",
         "tooltip-format-wifi": "{essid}",
-        "format-ethernet": "{bandwidthDownBits:>}{bandwidthUpBits:>}",
+        "format-ethernet": "{bandwidthDownBits:>} {bandwidthUpBits:>}",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "format-disconnected": " no_internet",
         "on-click": "footclient -T waybar_nmtui -e nmtui",
