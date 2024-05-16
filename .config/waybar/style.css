@@ -44,6 +44,7 @@ window#waybar {
   /* font-family: JetBrains Mono Nerd Font; */
   font-family: "CaskaydiaCove Nerd Font";
   font-size: 12px;
+  font-weight: bold;
   /* border-radius: 22px; */
 }
 
@@ -68,7 +69,7 @@ window#waybar {
 #custom-PBPbattery {
   padding: 0.25rem 0.75rem;
   margin: 1px 6px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(15, 16, 20, 1);
   border-radius: 8px;
 }
 
@@ -192,7 +193,7 @@ window#waybar {
 
 #workspaces {
   font-size: 12px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(15, 16, 20, 1);
   border-radius: 8px;
 }
 
