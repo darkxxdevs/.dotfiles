@@ -57,6 +57,9 @@ alias cd="z"
 # shell path variables 
 set -gx PATH $PATH $HOME/.config/composer/vendor/bin
 
+#cargo 
+set -gx PATH $PATH $HOME/.cargo/bin
+
 #sdk man config
 set -U fish_user_paths $HOME/.sdkman
 set -g __sdkman_custom_dir $HOME/.sdkman/bin/sdkman-init.sh
