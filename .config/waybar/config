@@ -8,9 +8,8 @@
     "height": 30,
 
     "modules-left": [
-        // "custom/launcher",
-        "hyprland/workspaces",
         "custom/media",
+        "hyprland/workspaces",
         "hyprland/window",
     ],
  
@@ -65,7 +64,7 @@
     "clock": {
         "interval": 10,
         // "format-alt": " {:%e %b %Y}", // Icon: calendar-alt
-        "format": "{:%e %b %Y %H:%M} ",
+        "format": " {:%H:%M} ",
         "tooltip-format": "{:%e %B %Y}"
     },
 
@@ -116,7 +115,7 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 120
+        "max-length": 100
     },
 
     "hyprland/workspaces": {
@@ -127,11 +126,15 @@
         //"format":"{icon}",
         "format-icons": {
             "1": "DEV",
-            "2": "SYS",
-            "3": "MED",
-            "4": "EXE",
-            "5": "BAT",
-            "6": "AI",
+            "2": "WEB",
+            "3": "SYS",
+            "4": "CODE",
+            "5": "EXE",
+            "6": "FIX",
+			"7": "EWW",
+			"8": "AI",
+			"9": "LAB",
+			"10": "GIT",
         }
     },
 

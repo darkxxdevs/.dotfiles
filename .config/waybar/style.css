@@ -71,6 +71,7 @@ window#waybar {
   margin: 1px 6px;
   background-color: rgba(15, 16, 20, 1);
   border-radius: 8px;
+  box-shadow: 1 1 3 0.5px #151515;
 }
 
 /* -----------------------------------------------------------------------------
