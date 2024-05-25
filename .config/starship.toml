@@ -1,166 +1,103 @@
-[character]
-success_symbol = "[• ](bold fg:blue) "
-error_symbol = "[• 󰅙](bold fg:white) "
+add_newline = false
+# A minimal left prompt
+format = """$directory$character"""
+palette = "catppuccin_mocha"
+# move the rest of the prompt to the right
+right_format = """$all"""
+command_timeout = 1000
 
-[cmd_duration]
-min_time=1000
-format = '[$duration](bold yellow)'
-
-[directory]
-read_only = " 󰌾"
-truncation_length = 1
-truncation_symbol = ''
-
-[git_status]
-conflicted = '🏳'
-ahead = '🏎'
-behind = ' 󰓖 '
-diverged = ' 󱡷 '
-up_to_date = '✓'
-untracked = '  '
-stashed = '󱣪 '
-modified = '  '
-staged = '[++\($count\)](green)'
-renamed = '󰏪 '
-deleted = '󰆴'
-
-
-[bun]
-format = 'via [🍙 $version](bold green) '
-
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
+[directory.substitutions]
+'~/tests/starship-custom' = 'work-project'
 
 [git_branch]
-symbol = ""
+format =  '[$symbol$branch(:$remote_branch)]($style)'
 
-[golang]
-symbol = " "
+[aws]
+format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
+disabled = false
+style = 'bold blue'
+symbol = " "
 
-[guix_shell]
-symbol = " "
+[deno]
+format = 'via [🦕 $version](green bold) '
 
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = ""
-
-[hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
 
 [lua]
-symbol = " "
+format = 'via [ $version](bold blue) '
 
-[memory_usage]
-symbol = "󰍛 "
+[ocaml]
+format = 'via [ $version]($style) '
 
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = ""
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[pijul_channel]
-symbol = " "
+[php]
+format = 'via [  $version](147 bold) '
 
 [python]
-symbol = "󱔎 "
+symbol = '󱔎 '
 
-[rlang]
-symbol = "󰟔 "
+[zig]
+symbol = ' '
 
-[ruby]
-symbol = " "
+[terraform]
+format = '[ 󱁢 $version$workspace]($style) '
 
 [rust]
-symbol = "󱘗 "
+format = 'via [⚙️ $version](red bold)'
 
-[scala]
-symbol = " "
+[bun]
+format = 'via [ $version](bold green) '
 
+[container]
+format = '[$symbol \[$name\]]($style) '
 
+[c]
+symbol= " "
+format = 'via [$symbol $version]($style)'
+
+[azure]
+disabled = false
+format = "on [$symbol($username)]($style) "
+symbol = "󰠅 "
+style = "blue bold"
+
+[golang]
+format = '[ ](bold cyan)'
+
+[kubernetes]
+symbol = '☸ '
+disabled = false
+detect_files = ['Dockerfile']
+format = '[$symbol$context( \($namespace\))]($style) '
+contexts = [
+  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
+]
+
+[docker_context]
+disabled = true
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
