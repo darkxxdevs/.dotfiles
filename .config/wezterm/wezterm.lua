@@ -2,10 +2,12 @@ local wezterm = require("wezterm")
 
 local config = {}
 
-config.font = wezterm.font("JetBrains Mono NF semiBold")
+config.font = wezterm.font("JetBrains Mono NF SemiBold", {
+	italic = false,
+})
 
 -- config.color_scheme = "Batman"
-config.color_scheme = "Sequoia Moonlight"
+config.color_scheme = "One Half Black (Gogh)"
 
 config.colors = {
 	background = "#0a0b0c",
@@ -16,7 +18,7 @@ config.colors = {
 -- 	"calt=0",
 -- }
 
-config.font_size = 10.6
+config.font_size = 10
 
 config.enable_tab_bar = false
 
@@ -31,6 +33,6 @@ config.window_padding = {
 	right = 0,
 }
 
-config.default_prog = { "/usr/bin/bash", "-l" }
+config.default_prog = { "/usr/bin/fish", "-l" }
 
 return config
