@@ -27,10 +27,10 @@ config.enable_wayland = false
 config.window_close_confirmation = "NeverPrompt"
 
 config.window_padding = {
-	top = 0,
+	top = 4,
 	bottom = 0,
-	left = 0,
-	right = 0,
+	left = 4,
+	right = 4,
 }
 
 config.default_prog = { "/usr/bin/fish", "-l" }
