@@ -60,7 +60,7 @@ symbol = "󰠅 "
 style = "blue bold"
 
 [golang]
-format = '[ ](bold cyan)'
+format = '[  ($version)](bold cyan)'
 
 [kubernetes]
 symbol = '☸ '
