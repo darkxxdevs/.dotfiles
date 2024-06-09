@@ -17,7 +17,7 @@ import webbrowser
 import subprocess
 from typing import List
 from libqtile import qtile
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile.dgroups import simple_key_binder
 from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, Group,  Key, Match, Screen, ScratchPad, DropDown
@@ -25,8 +25,8 @@ from libqtile.config import Click, Drag, Group,  Key, Match, Screen, ScratchPad,
 # CONTROLERS SETTINGS
 
 mod = "mod4"
-myTerm = "alacritty"
-myAltTerm = "alacritty"
+myTerm = "wezterm"
+myAltTerm = "wezterm"
 myBrowser = "brave"
 myAltBrowser = "firefox"
 myGithubUrl = "https://github.com/darkxxdevs"
