@@ -37,15 +37,11 @@ def open_github():
     webbrowser.open_new_tab(myGithubUrl)
 
 # get kernel version
-
-
 def getKernelVersion():
     return platform.release()
 
 
 # KEYBINDINGS
-
-
 keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
@@ -87,6 +83,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
     Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod, "shift"], "b", lazy.spawn(myAltBrowser)),
+	Key([mod], "p" , lazy.hide_show_bar())
 ]
 
 # calculations for the screen size
@@ -98,7 +95,6 @@ x = (1 - width) / 2
 y = (1 - height) / 2
 
 # WORKSPACES
-
 groups = [Group("DEV", layout='monadtall'),
           Group("WEB", layout='monadtall'),
           Group("DEV", layout='monadtall'),
@@ -510,7 +506,7 @@ def start_once():
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
-
+# autostrt these services on startup 
 subprocess.Popen(["nitrogen", "--restore"])
 # picom on startup
 os.system("picom --config ~/.config/picom/picom.conf &")
