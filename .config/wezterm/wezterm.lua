@@ -18,7 +18,7 @@ config.colors = {
 -- 	"calt=0",
 -- }
 
-config.font_size = 10
+config.font_size = 9.4
 
 config.enable_tab_bar = false
 
