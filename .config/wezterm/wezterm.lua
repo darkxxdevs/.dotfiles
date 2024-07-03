@@ -6,8 +6,7 @@ config.font = wezterm.font("JetBrains Mono NF SemiBold", {
 	italic = false,
 })
 
--- config.color_scheme = "Batman"
-config.color_scheme = "One Half Black (Gogh)"
+config.color_scheme = "mountain"
 
 config.colors = {
 	background = "#0a0b0c",
