@@ -16,11 +16,11 @@ import platform
 import webbrowser
 import subprocess
 from typing import List
-from libqtile import qtile
-from libqtile.lazy import lazy
-from libqtile.dgroups import simple_key_binder
-from libqtile import layout, bar, widget, hook
-from libqtile.config import Click, Drag, Group,  Key, Match, Screen, ScratchPad, DropDown
+from libqtile import qtile  # type: ignore
+from libqtile.lazy import lazy  # type: ignore
+from libqtile.dgroups import simple_key_binder  # type: ignore
+from libqtile import layout, bar, widget, hook  # type: ignore
+from libqtile.config import Click, Drag, Group,  Key, Match, Screen, ScratchPad, DropDown  # type: ignore
 
 # CONTROLERS SETTINGS
 
@@ -37,6 +37,8 @@ def open_github():
     webbrowser.open_new_tab(myGithubUrl)
 
 # get kernel version
+
+
 def getKernelVersion():
     return platform.release()
 
@@ -45,10 +47,11 @@ def getKernelVersion():
 keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "space", lazy.group['drxterm'].dropdown_toggle("myTerm")),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
+    Key([mod, "shift"], "n", lazy.layout.next(),
         desc="Move window focus to other window"),
 
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(),
@@ -78,12 +81,11 @@ keys = [
     Key([mod], "f", lazy.window.toggle_floating(), desc="Toggle floating"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    Key([mod], "space", lazy.group['drxterm'].dropdown_toggle("myTerm")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
     Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod, "shift"], "b", lazy.spawn(myAltBrowser)),
-	Key([mod], "p" , lazy.hide_show_bar())
+    Key([mod], "p", lazy.hide_show_bar())
 ]
 
 # calculations for the screen size
@@ -166,7 +168,7 @@ layouts = [
 ]
 
 
-colors = [["#0f1014", "#0f1014",],
+colors = [["#151515", "#151515",],
           ["#0f1014", "#0f1014"],
           ["#dfdfdf", "#dfdfdf"],
           ["#ff6c6b", "#ff6c6b"],
@@ -506,7 +508,8 @@ def start_once():
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
-# autostrt these services on startup 
+
+# autostrt these services on startup
 subprocess.Popen(["nitrogen", "--restore"])
 # picom on startup
 os.system("picom --config ~/.config/picom/picom.conf &")
