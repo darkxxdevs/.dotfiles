@@ -85,7 +85,8 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
     Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod, "shift"], "b", lazy.spawn(myAltBrowser)),
-    Key([mod], "p", lazy.hide_show_bar())
+    Key([mod], "p", lazy.hide_show_bar()),
+    Key([mod], "w", lazy.spawn("nitrogen"))
 ]
 
 # calculations for the screen size
@@ -190,7 +191,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
     font="CasKaydiaCove Nerd Font Bold",
-    fontsize=12,
+    fontsize=11,
     padding=2,
     background=colors[2]
 )
