@@ -2,16 +2,11 @@ local wezterm = require("wezterm")
 
 local config = {}
 
-config.font = wezterm.font("JetBrains Mono NF SemiBold", {
+config.font = wezterm.font("JetBrainsMono NF SemiBold", {
 	italic = false,
 })
 
 config.color_scheme = "mountain"
-
-config.colors = {
-	background = "#0a0b0c",
-	foreground = "#cccccc",
-}
 
 -- config.harfbuzz_features = {
 -- 	"calt=0",
