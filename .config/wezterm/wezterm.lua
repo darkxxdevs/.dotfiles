@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = {}
 
-config.font = wezterm.font("JetBrainsMono NF SemiBold", {
+config.font = wezterm.font("JetBrainsMono NF Semibold", {
 	italic = false,
 })
 
