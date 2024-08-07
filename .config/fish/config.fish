@@ -15,7 +15,7 @@ end
 set fish_greeting
 
 #echo "i use arch btw!!! >_<"
-uptime
+# uptime
 
 #initializing the starship prompt 
 starship init fish | source
@@ -44,8 +44,6 @@ set -x BROWSER "brave"
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
-#zeoxide
-zoxide init fish | source
 
 # accepting autosuggestions using TAB 
 bind \t accept-autosuggestion
@@ -59,7 +57,6 @@ alias ll="ls -alF"
 alias l='ls -CF'
 alias cl="clear"
 alias l="ls -CF"
-alias cd="z"
 
 # shell path variables 
 set -gx PATH $PATH $HOME/.config/composer/vendor/bin
