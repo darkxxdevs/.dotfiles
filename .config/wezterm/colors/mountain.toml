@@ -3,7 +3,7 @@
 
 [colors]
 foreground = "#f0f0f0"
-background = "#0f0f0f"
+background = "#0f1014"
 cursor_bg = "#f0f0f0"
 cursor_fg = "#f0f0f0"
 cursor_border = "#262626"
