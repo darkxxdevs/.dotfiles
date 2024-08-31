@@ -70,6 +70,9 @@ set -x ANDROID_HOME "$HOME/Android/Sdk"
 # react native packager hostname
 set -x REACT_NATIVE_PACKAGER_HOSTNAME 192.168.1.40
 
+#shell path for elixir-ls
+set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin
+
 # sourcing various packages 
 
  set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/darkxx/.ghcup/bin $PATH # ghcup-env
