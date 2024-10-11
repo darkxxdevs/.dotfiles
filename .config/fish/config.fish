@@ -1,4 +1,3 @@
-
 ##################################################################################
 ###██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗    ███████╗██╗███████╗██╗  ██╗###
 ##██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝    ██╔════╝██║██╔════╝██║  ██║###
@@ -43,6 +42,7 @@ end
 set -x BROWSER "brave"
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
+set -x PATH $HOME/Android/Sdk/platform-tools $PATH
 
 
 # accepting autosuggestions using TAB 
@@ -72,6 +72,8 @@ set -x REACT_NATIVE_PACKAGER_HOSTNAME 192.168.1.40
 
 #shell path for elixir-ls
 set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin
+
+
 
 # sourcing various packages 
 
