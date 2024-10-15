@@ -40,6 +40,7 @@ end
 
 # shell variables 
 set -x BROWSER "brave"
+set -x HYPRSHOT_DIR "/home/xonoxc/Pictures"
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 set -x PATH $HOME/Android/Sdk/platform-tools $PATH
