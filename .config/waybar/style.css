@@ -230,3 +230,11 @@ window#waybar {
 	padding-right: 1px;
 	font-size: 13px;
 }
+
+#tray menu * {
+	font-weight: bold;
+	padding: 3px;
+	font-size: 11.2px;
+	color: #cccccc;
+	background-color: #0f1014;
+}
