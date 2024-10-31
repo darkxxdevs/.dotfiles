@@ -1,6 +1,6 @@
 [character]
-success_symbol= "[•  ](bold fg:purple)"
-error_symbol = "[• 󰅙 ](bold fg:pink) "
+success_symbol= "[• ](bold fg:purple)"
+error_symbol = "[• 󰅙](bold fg:pink)"
 
 
 [bun]
