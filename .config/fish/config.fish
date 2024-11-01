@@ -13,6 +13,8 @@ end
 
 set fish_greeting
 
+fish_vi_key_bindings
+
 #echo "i use arch btw!!! >_<"
 # uptime
 
@@ -73,6 +75,12 @@ set -x REACT_NATIVE_PACKAGER_HOSTNAME 192.168.1.40
 
 #shell path for elixir-ls
 set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin
+
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+
+pyenv init - | source
 
 
 
