@@ -46,6 +46,7 @@ set -x HYPRSHOT_DIR "/home/xonoxc/Pictures"
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 set -x PATH $HOME/Android/Sdk/platform-tools $PATH
+set -x PATH $HOME/.cargo/bin $PATH
 
 
 # accepting autosuggestions using TAB 
