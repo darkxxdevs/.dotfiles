@@ -13,7 +13,7 @@ end
 
 set fish_greeting
 
-fish_vi_key_bindings
+# fish_vi_key_bindings
 
 #echo "i use arch btw!!! >_<"
 # uptime
@@ -55,6 +55,7 @@ bind \t accept-autosuggestion
 #setting up some of my alias 
 alias vim="nvim"
 alias ls="exa --icons"
+alias fd "cd ~ && cd (find * -type d | fzf)"
 alias sd="cd ~ && cd \$(find . -type d | sed 's|^\./||' | fzf)"
 alias la="ls -A"
 alias ll="ls -alF"
@@ -64,6 +65,7 @@ alias l="ls -CF"
 
 # shell path variables 
 set -gx PATH $PATH $HOME/.config/composer/vendor/bin
+set -gx  PATH $PATH /usr/bin/elixir
 
 #sdk man config
 set -U fish_user_paths $HOME/.sdkman
@@ -76,6 +78,7 @@ set -x REACT_NATIVE_PACKAGER_HOSTNAME 192.168.1.40
 
 #shell path for elixir-ls
 set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin
+set -gx PATH $PATH $HOME/.local/bin
 
 set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
@@ -92,3 +95,10 @@ pyenv init - | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# pnpm
+set -gx PNPM_HOME "/home/xonoxc/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
