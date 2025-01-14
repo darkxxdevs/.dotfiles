@@ -13,10 +13,49 @@ end
 
 set fish_greeting
 
-# fish_vi_key_bindings
 
 #echo "i use arch btw!!! >_<"
 # uptime
+
+# function to check updates whenever needed
+function cu 
+    echo "wait ..."
+	set update_count (checkupdates 2>/dev/null | wc -l )
+
+	if test $update_count -gt 0 
+		echo " $update_count updates available."
+	end
+end
+
+#function to extract any type of files
+function extract
+    set file $argv[1]
+    if test -f $file
+        switch (string match -r '\.([^.]+)$' -- $file)
+            case 'tar.gz' 'tgz'
+                tar xzf $file
+            case 'tar.bz2' 'tbz'
+                tar xjf $file
+            case 'tar.xz' 'txz'
+                tar xJf $file
+            case 'zip'
+                unzip $file
+            case '*'
+                echo "Unsupported file type"
+        end
+    else
+        echo "$file is not a valid file"
+    end
+end
+
+
+# config reload
+function reload-config
+    source ~/.config/fish/config.fish
+    echo "Fish configuration reloaded...."
+end
+
+
 
 #initializing the starship prompt 
 starship init fish | source
@@ -55,7 +94,7 @@ bind \t accept-autosuggestion
 #setting up some of my alias 
 alias vim="nvim"
 alias ls="exa --icons"
-alias fd "cd ~ && cd (find * -type d | fzf)"
+alias fd='cd ~ && cd $(find . -type d 2>/dev/null | fzf --preview "tree -aC {} | head -n 20" --prompt "Select directory: " --height 40% --border --reverse)'
 alias sd="cd ~ && cd \$(find . -type d | sed 's|^\./||' | fzf)"
 alias la="ls -A"
 alias ll="ls -alF"
@@ -64,8 +103,8 @@ alias cl="clear"
 alias l="ls -CF"
 
 # shell path variables 
-set -gx PATH $PATH $HOME/.config/composer/vendor/bin
-set -gx  PATH $PATH /usr/bin/elixir
+set -x PATH $PATH $HOME/.config/composer/vendor/bin
+set -x  PATH $PATH /usr/bin/elixir
 
 #sdk man config
 set -U fish_user_paths $HOME/.sdkman
