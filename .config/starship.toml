@@ -1,10 +1,10 @@
 [character]
-success_symbol = "[➜ ▶︎](bold green)"
-error_symbol = "[➜ ▶︎](bold white)"
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold white)"
 
 
 [bun]
-format = 'via [󰯰 $version](bold green) '
+format = " [ $version ](bold blue)"
 
 [aws]
 symbol = "  "
@@ -133,6 +133,9 @@ symbol = "󱔎 "
 
 [rlang]
 symbol = "󰟔 "
+
+[deno]
+format = 'via [ $version](green bold) '
 
 [ruby]
 symbol = " "
